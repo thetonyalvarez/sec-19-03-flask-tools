@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<img src="/static/img/interaction-31.png" class="d-block m-auto pb-5" alt="">
+<h1 class="mb-2 text-center">{{survey.title}}</h1>
+<p class="mb-5 text-center">{{survey.instructions}}</p>
+<form action="/start" method="POST">
+	<button class="start-btn btn btn-primary">Start the Survey</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% block form_fields %}
+
+
+<div class="question">{{question.question}}</div>
+
+{% for choice in question.choices %}
+<div class="form-check">
+	<label class="form-check-label" for="choice-{{choice}}">
+		<input class="form-check-input" type="radio" name="choice" id="choice-{{choice}}" value="{{choice}}" required>
+		<span>{{choice}}</span>
+	</label>
+</div>
+{% endfor %}
+<div class="invalid-feedback">Please select an option.</div>
+<button class="btn btn-primary w-100">Submit</button>
+
+{% endblock %}
